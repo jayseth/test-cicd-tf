@@ -1,3 +1,3 @@
 resource "aws_vpc" "default" {
-  cidr_block = "1.2.0.0/14"
+  cidr_block = "1.2.0.0/16"
 }
