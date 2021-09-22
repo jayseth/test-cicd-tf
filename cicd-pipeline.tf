@@ -16,6 +16,11 @@ resource "aws_codebuild_project" "tf-plan" {
         credential = var.dockerhub_credentials
         credential_provider = "SECRETS_MANAGER"
     }
+    environment_variable{
+        name =  "DEPLOY_MODULE"
+        value = var.deploy_mod
+      }
+    
  }
  source {
      type   = "CODEPIPELINE"
@@ -40,6 +45,10 @@ resource "aws_codebuild_project" "tf-apply" {
     registry_credential{
         credential = var.dockerhub_credentials
         credential_provider = "SECRETS_MANAGER"
+    }
+    environment_variable {
+       name =  "DEPLOY_MODULE"
+        value =  var.deploy_mod
     }
  }
  source {
@@ -73,6 +82,7 @@ resource "aws_codepipeline" "cicd_pipeline" {
                 BranchName   = "master"
                 ConnectionArn = var.codestar_connector_credentials
                 OutputArtifactFormat = "CODE_ZIP"
+                DetectChanges = "false"
             }
         }
     }
