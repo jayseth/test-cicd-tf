@@ -1,1 +1,1 @@
-cidr = "${cidr}"
+cidr = $cidr
