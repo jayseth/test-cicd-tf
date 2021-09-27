@@ -5,9 +5,4 @@ terraform {
 resource "aws_vpc" "default" {
   cidr_block = var.cidr
 }
-
-variable "cidr" {
-  type = string
-  description = "CIDR BLOCK"
-}
   
