@@ -3,6 +3,6 @@ terraform {
 }
 
 resource "aws_vpc" "default" {
-  cidr_vpc = var.cidr_vpc
+  cidr_block = var.cidr_vpc
 }
   
