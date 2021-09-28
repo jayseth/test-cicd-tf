@@ -1,3 +1,3 @@
-variable "cidr"{
+variable "cidr_vpc"{
     type = string
 }
