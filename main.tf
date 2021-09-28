@@ -4,5 +4,5 @@ module "IAM" {
 
 module "VPC" {
     source = "./modules/VPC"
-    cidr = var.cidr
+    cidr = "${cidr}"
 }
