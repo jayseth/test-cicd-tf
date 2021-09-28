@@ -4,5 +4,5 @@ module "IAM" {
 
 module "VPC" {
     source = "./modules/VPC"
-    cidr_block = var.cidr_vpc
+    cidr_block_vpc = var.cidr_vpc
 }
