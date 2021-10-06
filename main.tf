@@ -45,7 +45,7 @@ module "ec2" {
     
 module "ECS" {
 
-    source = "./module/iam"
+    source = "./module/ECS"
 
     aws_new_user  = var.aws_user_name
     aws_new_group = var.aws_group_name
