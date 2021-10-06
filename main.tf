@@ -42,3 +42,15 @@ module "ec2" {
   
   
 }
+    
+module "ECS" {
+
+    source = "./module/iam"
+
+    aws_new_user  = var.aws_user_name
+    aws_new_group = var.aws_group_name
+    policy_data  =  var.aws_policy_data
+    
+    
+  
+}
