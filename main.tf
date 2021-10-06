@@ -8,3 +8,22 @@ module "ECS" {
     task_container_image = var.task_container_image
     trusted_cidr_blocks = var.trusted_cidr_blocks
 }
+
+    
+module "vpc" {
+
+    
+    source = "./module/VPC"
+    
+    aws_vpc_cidr             = var.cidr_vpc
+    public_subnet_cidr       = var.public_subnet
+    private_subnet_cidr      = var.private_subnet
+    aws_vpc_sub_az           = var.vpc_subnet_az
+
+    network_acl_egress     = var.network_acl_egress
+    network_acl_ingress    = var.network_acl_ingress
+    security_group_ingress = var.security_group_ingress
+    security_group_egress  = var.security_group_egress
+  
+}
+ 
