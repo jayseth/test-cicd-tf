@@ -47,10 +47,9 @@ module "ECS" {
 
     source = "./module/ECS"
 
-    aws_new_user  = var.aws_user_name
-    aws_new_group = var.aws_group_name
-    policy_data  =  var.aws_policy_data
-    
-    
-  
+    cluster_name = var.cluster_name
+    name_prefix = var.name_prefix
+    subnets_ids = var.subnet_ids
+    task_container_image = var.task_container_image
+    trusted_cidr_blocks = var.trusted_cidr_blocks
 }
