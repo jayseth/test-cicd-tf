@@ -35,3 +35,14 @@ aws_policy_data  = {
 
 ami_id = "ami-0c2d06d50ce30b442"
 instance_Type = "t2.micro"
+
+
+
+######################################################################################
+###################################  ECS  ############################################
+
+cluster_name = "test"
+name_prefix = "test"
+subnets_ids = ["subnet-6f6a5361"]
+task_container_image = "test"
+trusted_cidr_blocks = ["172.31.64.0/20"]
