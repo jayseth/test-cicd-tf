@@ -611,3 +611,27 @@ variable "zone_name" {
 }
 
 #----------------------------------------------------------------------------------------------------------------------------------
+
+
+#####################################################################################
+####################################### Elastic Beanstalk ###########################
+
+
+variable "mod_ebs_name" {
+    description = "name for the ebs application"
+    
+    type=string
+  
+}
+
+variable "mod_ebs_application_version_name" {
+    description = "name for the ebs application version"
+    
+    type= string
+}
+
+variable "mod_app_version_source" {
+    description = "Source for application version file"
+    
+    type = string
+}
