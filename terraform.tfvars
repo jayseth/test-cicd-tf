@@ -43,3 +43,13 @@ security_group_egress  ={
           protocol     = "-1"
        
 }
+
+#####################################################################################
+####################################### vpc_peering #################################
+
+mod_aws_region_peer="us-east-1"
+mod_aws_profile="terraform-practice"
+mod_vpc_main_subnet_cidr="10.0.0.0/16"
+mod_vpc_peer_subnet_cidr="10.1.0.0/16"
+mod_aws_vpc_sub_az="us-west-2a"
+
