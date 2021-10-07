@@ -71,9 +71,14 @@ module "alb" {
 
   
 } 
-    module "EC2" {
+    
+    
+    
+module "EC2" {
 
 source = "./module/EC2"
+    
+    
 region = var.region
 profile = var.profile
 ami = var.ami
@@ -119,3 +124,21 @@ vpc_cidr           = var.vpc_cidr
 }
 
   
+module "fsxwindows_mod" {
+
+    source = "./module/FSxWindows"
+
+    
+    fsx_win_capacity             = var.mod_fsx_win_capacity
+    fsx_win_throughtput_capacity =var.mod_fsx_win_throughtput_capacity
+    fsx_vpc_cidr                 = var.mod_fsx_vpc_cidr
+    fsx_win_subids               = var.mod_fsx_win_subids
+    fsx_win_sub_az               = var.fsx_win_sub_az
+
+    serv_directory_name          = var.mod_serv_directory_name
+    serv_directory_password      = var.mod_serv_directory_password
+    serv_directory_size          = var.mod_serv_directory_size
+    serv_directory_type          = var.mod_serv_directory_type
+    
+  
+}
