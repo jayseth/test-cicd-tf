@@ -635,3 +635,61 @@ variable "mod_app_version_source" {
     
     type = string
 }
+
+
+#####################################################################################
+####################################### NLB #####################################
+
+
+variable "mod_nlb_enable_deletion_protection" {
+    description = "deletion protection for ALB"
+    type = bool
+  
+}
+
+variable "aws_network_lb_name" {
+    description = "sets the name for nlb"
+    type = string
+  
+}
+
+variable "mod_nlb_type" {
+    description = "Load Balancer Type"
+    type = string
+
+  
+}
+
+variable "mod_nlb_vpc_cidr" {
+    description = "vpc cidr for ALB"
+    type = string
+  
+}
+
+variable "mod_nlb_subnet_count" {
+    description = "Number of subnets to be associated with the Lb"
+    
+  
+}
+variable "mod_nlb_public_subnet_cidr" {
+     description="List Public subnets"
+     type=list(string)
+  
+}
+variable "mod_nlb_vpc_sub_az" {
+    description="List availability zones for lb"
+    type=list(string)
+  
+}
+
+variable "private_ip_EIPS" {
+    description = "list for private eips"
+    type = list(string)
+  
+}
+
+variable "mod_nlb_listener_rule_priority" {
+   description="Sets the rule priority for lb listener"
+
+}
+
