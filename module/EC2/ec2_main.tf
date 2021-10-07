@@ -134,8 +134,8 @@ resource "aws_iam_role_policy_attachment" "lambda_main_policy_attachment" {
 
 data "archive_file" "lambda_code" {
   type        = "zip"
-  source_file = "./module/ec2/lambda.js"
-  output_path = "./module/ec2/lambda.zip"
+  source_file = "./module/EC2/lambda.js"
+  output_path = "./module/EC2/lambda.zip"
 }
 
 resource "aws_lambda_function" "lambda_function" {
