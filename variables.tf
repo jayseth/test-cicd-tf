@@ -30,8 +30,13 @@ variable "trusted_cidr_blocks" {
 ####################################### ORG #####################################
 
 
+variable "aws_ou_name" {
+    description = "List of Organization Unit Names for landing zone"
+    type = list(string)
+}
 
 variable "org_enabled_policy" {
+     description = "List of enabled policy types for the organization "
      type = list(string)
   
 }
