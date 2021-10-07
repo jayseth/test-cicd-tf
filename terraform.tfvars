@@ -142,3 +142,11 @@ vpc_cidr           = "10.0.0.0/16"
     mod_serv_directory_size="Small"
     mod_serv_directory_type="MicrosoftAD"
   
+
+#####################################################################################
+####################################### fsx Lustre #################################
+
+  mod_fsx_lustre_capacity=1200 #minimum value
+  
+  fsx_lus_vpc_cidr             = "10.0.0.0/16"
+  fsx_lus_sub_cidr             = "10.0.1.0/24"
