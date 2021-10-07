@@ -1,13 +1,13 @@
 terraform{
     backend "s3" {
-        bucket = "dheeraj-aws-pipeline-test"#put your bucket name
+        bucket = "pipeline-artifact-devjs"#put your bucket name
         encrypt = true
-        key = "landingzone/terraform.tfstate"
-        region = "ap-south-1"#update the region
+        key = "main/terraform.tfstate"
+        region = "us-east-1"#update the region
     }
 }
 
 
 provider "aws" {
-  region  = var.aws_region
+  region  = "us-east-1"
 }
