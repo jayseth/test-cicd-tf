@@ -53,3 +53,14 @@ mod_vpc_main_subnet_cidr="10.0.0.0/16"
 mod_vpc_peer_subnet_cidr="10.1.0.0/16"
 mod_aws_vpc_sub_az="us-west-2a"
 
+#####################################################################################
+####################################### ALB #########################################
+
+
+mod_lb_enable_deletion_protection   = false
+mod_lb_type                      = "application"
+mod_aws_vpc_cidr                 = "10.0.0.0/16"
+mod_lb_subnet_count              = 2
+mod_public_subnet_cidr           = ["10.0.0.0/24","10.0.1.0/24"]
+mod_alb_vpc_sub_az               = ["us-west-2a","us-west-2b"]
+mod_lb_listener_rule_priority    = 100
