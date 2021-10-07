@@ -50,11 +50,12 @@ module "subnets" {
   vpc_id                          = module.vpc.vpc_id
   igw_id                          = module.vpc.igw_id
   cidr_block                      = module.vpc.vpc_cidr_block
-  nat_gateway_enabled             = false
+  nat_gateway_enabled             = true
   nat_instance_enabled            = false
   tags                            = local.tags
   public_subnets_additional_tags  = local.public_subnets_additional_tags
   private_subnets_additional_tags = local.private_subnets_additional_tags
+  aws_route_create_timeout = "10m"
 
   context = module.this.context
 }
