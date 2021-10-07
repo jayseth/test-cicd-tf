@@ -27,3 +27,16 @@ module "vpc" {
   
 }
  
+module "vpc_peering"{
+
+    source = "./module/VPC_PEERING"
+
+
+    aws_region_peer=var.mod_aws_region_peer
+    aws_profile=var.mod_aws_profile
+    vpc_main_subnet_cidr=var.mod_vpc_main_subnet_cidr
+    vpc_peer_subnet_cidr=var.mod_vpc_peer_subnet_cidr
+    aws_vpc_sub_az=var.mod_aws_vpc_cidr
+
+
+}
