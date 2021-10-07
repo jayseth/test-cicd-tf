@@ -30,7 +30,7 @@ variable "trusted_cidr_blocks" {
 #####################################################################################
 ###################################  EKS  ###########################################
 
-variable "availability_zones" {
+variable "eks_availability_zones" {
   type        = list(string)
   description = "List of availability zones"
 }
