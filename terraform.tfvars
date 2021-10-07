@@ -7,6 +7,17 @@ subnets_ids = ["subnet-6f6a5361"]
 task_container_image = "test"
 trusted_cidr_blocks = ["172.31.64.0/20"]
 
+#####################################################################################
+####################################### org_mod #####################################
+
+aws_ou_name=["Security Account","Log Archive","Shared Services Account"]
+org_enabled_policy=["SERVICE_CONTROL_POLICY"]
+
+ enable_acc_log=false
+ enable_acc_sa=false
+ enable_acc_ssa= false
+ aws_account_Org_usr=["user-3","user-4"]
+ aws_account_Org_usr_email= ["av9152@srmist.edu.in","arul_saxena@srmuniv.edu.in"]
 
 ####################################################################################
 ####################################### vpc-mod ####################################
