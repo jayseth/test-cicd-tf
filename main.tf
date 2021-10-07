@@ -9,6 +9,16 @@ module "ECS" {
     trusted_cidr_blocks = var.trusted_cidr_blocks
 }
 
+module "EKS" {
+    source = "./module/EKS/Cluster/complete"
+    
+    availability_zones = var.availability_zones
+    desired_size = var.desired_size
+    max_size = var.max_size
+    min_size = var.min_size
+    
+}
+    
 module "org" {
 
     source = "./module/ORG"
