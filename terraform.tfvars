@@ -87,6 +87,7 @@ enable_instance = false #Set true to deploy instance
 ami = {east1 = "ami-087c17d1fe0178315", east2 = "ami-00dfe2c7ce89a450b", west-1="ami-011996ff98de391d1",west-2="ami-0c2d06d50ce30b442"}
 instanceType = "t2.micro"
 index =0
+region = "us-east-1"
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------
