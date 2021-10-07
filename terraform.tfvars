@@ -218,3 +218,19 @@ record_type = "A"
     mod_ebs_name                     = "ebs_app_new"
     mod_ebs_application_version_name = "ebs_application_version_1"
     mod_app_version_source           = "./module/ELASTIC_BEANSTALK/app_example.zip" 
+
+#####################################################################################
+####################################### NLB #########################################
+
+mod_nlb_enable_deletion_protection      = false
+aws_network_lb_name                     = "network-lb-tf"
+mod_nlb_type                            = "network"
+mod_nlb_vpc_cidr                        = "10.0.0.0/16"
+mod_nlb_subnet_count                    = 2
+mod_nlb_public_subnet_cidr              = ["10.0.0.0/24","10.0.1.0/24"]
+mod_nlb_vpc_sub_az                      = ["us-west-2a","us-west-2b"]
+private_ip_EIPS                         = ["10.0.0.12","10.0.0.11"]
+mod_nlb_listener_rule_priority          = 100
+
+
+
