@@ -26,6 +26,33 @@ variable "trusted_cidr_blocks" {
 }
 
 
+
+#####################################################################################
+###################################  EKS  ###########################################
+
+variable "availability_zones" {
+  type        = list(string)
+  description = "List of availability zones"
+}
+
+variable "desired_size" {
+  type        = number
+  description = "Desired number of worker nodes"
+}
+
+variable "max_size" {
+  type        = number
+  description = "The maximum size of the AutoScaling Group"
+}
+
+variable "min_size" {
+  type        = number
+  description = "The minimum size of the AutoScaling Group"
+}
+  
+
+
+
 #####################################################################################
 ####################################### ORG #####################################
 
