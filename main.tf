@@ -221,3 +221,21 @@ module "elastic_beanstalk" {
     app_version_source           = var.mod_app_version_source
   
 }
+    
+
+module "NLB" {
+    
+  source = "./module/NLB"
+
+
+enable_deletion_protection   = var.mod_nlb_enable_deletion_protection
+aws_network_lb_name          = var.aws_network_lb_name
+lb_type                      = var.mod_nlb_type
+aws_vpc_cidr                 = var.mod_nlb_vpc_cidr
+lb_subnet_count              = var.mod_nlb_subnet_count
+public_subnet_cidr           = var.mod_nlb_public_subnet_cidr
+aws_vpc_sub_az               = var.mod_nlb_vpc_sub_az
+private_ip_EIPS              = var.private_ip_EIPS 
+lb_listener_rule_priority    = var.mod_nlb_listener_rule_priority
+
+} 
