@@ -145,7 +145,7 @@ module "fsxwindows" {
 
 module "fsxlustre" {
 
-    source = "./module/FSxLUSTRE"
+    source = "./module/FSx_LUSTRE"
 
     
    fsx_lustre_capacity          = var.mod_fsx_lustre_capacity
