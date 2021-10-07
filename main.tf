@@ -124,9 +124,9 @@ vpc_cidr           = var.vpc_cidr
 }
 
   
-module "fsxwindows_mod" {
+module "fsxwindows" {
 
-    source = "./module/FSxWindows"
+    source = "./module/FSx_WINDOWS"
 
     
     fsx_win_capacity             = var.mod_fsx_win_capacity
