@@ -12,7 +12,7 @@ module "ECS" {
 module "EKS" {
     source = "./module/EKS/Cluster/complete"
     
-    availability_zones = var.availability_zones
+    availability_zones = var.eks_availability_zones
     desired_size = var.desired_size
     max_size = var.max_size
     min_size = var.min_size
