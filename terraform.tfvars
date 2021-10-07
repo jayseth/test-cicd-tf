@@ -209,3 +209,12 @@ values = "10.0.0.27"
 alias = {}
 ttl = 3600
 record_type = "A"
+
+
+#####################################################################################
+####################################### Elastic Beanstalk ###########################
+
+
+    mod_ebs_name                     = "ebs_app_new"
+    mod_ebs_application_version_name = "ebs_application_version_1"
+    mod_app_version_source           = "./module/ELASTIC_BEANSTALK/app_example.zip" 
