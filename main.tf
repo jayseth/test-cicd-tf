@@ -9,6 +9,21 @@ module "ECS" {
     trusted_cidr_blocks = var.trusted_cidr_blocks
 }
 
+module "org" {
+
+    source = "./module/ORG"
+    
+    aws_OU_name     = var.aws_ou_name
+    aws_enabled_policy  = var.org_enabled_policy
+
+    enable_acc_log=var.enable_acc_sa
+    enable_acc_sa=var.enable_acc_log
+    enable_acc_ssa= var.enable_acc_ssa
+
+    aws_account_Org_usr=var.aws_account_Org_usr
+    aws_account_Org_usr_email=var.aws_account_Org_usr_email
+  
+}
     
 module "vpc" {
 
@@ -56,3 +71,5 @@ module "alb" {
 
   
 }  
+
+  
