@@ -76,3 +76,34 @@ variable "security_group_egress" {
    
   
 }
+
+
+#####################################################################################
+####################################### vpc_peering ################################
+
+variable "mod_aws_region_peer"{
+
+    description = "peering vpc region"
+    type=string
+}
+variable "mod_aws_profile"{
+
+    description = "aws profile for peering connection"
+    type = string
+}
+variable "mod_vpc_main_subnet_cidr"{
+
+    description = "vpc main subnet"
+    type = string
+}
+variable "mod_vpc_peer_subnet_cidr"{
+
+    description = "vpc peer subnet"
+    type = string
+}
+variable "mod_aws_vpc_sub_az"{
+
+    description = "vpc az"
+    type = string
+}
+
