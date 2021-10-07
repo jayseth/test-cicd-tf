@@ -211,3 +211,13 @@ record_type = var.record_type
 
 #-------------------------------------------------------------------------------------------------------------
 
+
+module "elastic_beanstalk" {
+
+    source = "./module/ELASTIC_BEAN"
+
+    ebs_name                     = var.mod_ebs_name
+    ebs_application_version_name = var.mod_ebs_application_version_name
+    app_version_source           = var.mod_app_version_source
+  
+}
