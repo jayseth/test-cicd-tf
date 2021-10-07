@@ -142,3 +142,15 @@ module "fsxwindows" {
     
   
 }
+
+module "fsxlustre" {
+
+    source = "./module/FSxLUSTRE"
+
+    
+   fsx_lustre_capacity          = var.mod_fsx_lustre_capacity
+   fsx_lus_vpc_cidr             = var.fsx_lus_vpc_cidr
+   fsx_lus_sub_cidr             = var.fsx_lus_sub_cidr
+  
+}
+
