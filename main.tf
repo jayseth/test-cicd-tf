@@ -71,9 +71,9 @@ module "alb" {
 
   
 } 
-    module "ec2" {
+    module "EC2" {
 
-source = "./module/ec2"
+source = "./module/EC2"
 region = var.region
 profile = var.profile
 ami = var.ami
