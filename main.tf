@@ -318,10 +318,10 @@ module "KMS" {
   
 } 
 
-module "ebs_mod" {
+module "EBS" {
 
     
-    source = "./module/ebs"
+    source = "./module/EBS"
     
     ebs_availability_zone = var.ebs_availability_zone
     ebs_encrypted = var.ebs_encrypted
@@ -335,10 +335,10 @@ module "ebs_mod" {
   
 }
 
-module "s3_mod" {
+module "S3" {
 
     
-    source = "./module/s3"
+    source = "./module/S3"
     
     s3_log-acl = var.s3_log-acl
     s3_bucket-acl = var.s3_bucket-acl
@@ -349,8 +349,8 @@ module "s3_mod" {
   
 }  
 
-module "rds_mod" {
-    source = "./module/rds"
+module "RDS" {
+    source = "./module/RDS"
     
     rds_main_allocated_storage = var.rds_main_allocated_storage
     rds_main_backup_retention_period = var.rds_main_backup_retention_period
