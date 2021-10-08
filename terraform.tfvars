@@ -34,7 +34,7 @@ org_enabled_policy=["SERVICE_CONTROL_POLICY"]
 cidr_vpc="10.0.0.0/16"
 public_subnet="10.0.0.0/24"
 private_subnet="10.0.1.0/24"
-vpc_subnet_az="us-west-2a"
+vpc_subnet_az="us-east-1a"
 
 network_acl_egress     = {
             protocol   = "tcp"
@@ -71,7 +71,7 @@ mod_aws_region_peer="us-east-1"
 mod_aws_profile="terraform-practice"
 mod_vpc_main_subnet_cidr="10.0.0.0/16"
 mod_vpc_peer_subnet_cidr="10.1.0.0/16"
-mod_aws_vpc_sub_az="us-west-2a"
+mod_aws_vpc_sub_az="us-east-1a"
 
 #####################################################################################
 ####################################### ALB #########################################
@@ -237,7 +237,7 @@ mod_nlb_type                            = "network"
 mod_nlb_vpc_cidr                        = "10.0.0.0/16"
 mod_nlb_subnet_count                    = 2
 mod_nlb_public_subnet_cidr              = ["10.0.0.0/24","10.0.1.0/24"]
-mod_nlb_vpc_sub_az                      = ["us-west-2a","us-west-2b"]
+mod_nlb_vpc_sub_az                      = ["us-east-1a","us-east-1b"]
 private_ip_EIPS                         = ["10.0.0.12","10.0.0.11"]
 mod_nlb_listener_rule_priority          = 100
 
@@ -270,7 +270,7 @@ mod_nlb_listener_rule_priority          = 100
     dax_cluster_name        = "cluster-example"
     dax_replication_factor  = 2 #should be equal to number of AZ given  
     dax_node_type           = "dax.r4.large"
-    dax_az                  = ["us-west-2a","us-west-2b"]
+    dax_az                  = ["us-east-1a","us-east-1b"]
 
 
 
