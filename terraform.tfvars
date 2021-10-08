@@ -274,3 +274,22 @@ mod_nlb_listener_rule_priority          = 100
 
 
 
+
+
+#####################################################################################
+####################################### ACM #########################################
+
+
+    acm_domain_name = "example435terrform.com"
+    acm_validation_method = "EMAIL"
+
+#####################################################################################
+####################################### KMS #########################################
+
+    kms_key_desc = "KMS key 1"
+    kms_key_deletion_window = 10
+    kms_key_usage = "ENCRYPT_DECRYPT"
+    kms_key_spec = "SYMMETRIC_DEFAULT"
+    kms_key_enabled = true
+    kms_key_rotation = false
+    kms_key_alias = "my-key-alias"
