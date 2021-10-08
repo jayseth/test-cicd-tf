@@ -46,7 +46,7 @@ resource "aws_s3_bucket" "test_bucket" {
 resource "aws_s3_bucket_object" "website_file" {
   bucket = aws_s3_bucket.test_bucket.bucket
   key    = var.s3_static-website
-  source = "module/s3/${var.s3_static-website}"
+  source = "module/S3/${var.s3_static-website}"
   acl = var.s3_bucket-acl
   server_side_encryption = "aws:kms"
   kms_key_id = aws_kms_key.test_key.arn
