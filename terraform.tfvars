@@ -297,7 +297,7 @@ mod_nlb_listener_rule_priority          = 100
 #####################################################################################
 ####################################### ebs_mod #####################################
 
-ebs_availability_zone = "ap-south-1a"
+ebs_availability_zone = "us-east-1a"
 ebs_encrypted = true
 ebs_size = 40
 ebs_snap = "true"
