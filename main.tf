@@ -19,7 +19,7 @@ module "EKS" {
     
 }
     
-module "org" {
+module "ORG" {
 
     source = "./module/ORG"
     
@@ -35,7 +35,7 @@ module "org" {
   
 }
     
-module "vpc" {
+module "VPC" {
 
     
     source = "./module/VPC"
@@ -52,7 +52,7 @@ module "vpc" {
   
 }
  
-module "vpc_peering"{
+module "VPC_PEERING"{
 
     source = "./module/VPC_PEERING"
 
@@ -67,7 +67,7 @@ module "vpc_peering"{
 }
     
     
-module "alb" {
+module "ALB" {
 
     source = "./module/ALB"
 
