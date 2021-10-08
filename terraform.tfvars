@@ -362,3 +362,29 @@ rds_crr_parameter_group = "testcrrparameter"
 rds_crr_region = "ap-south-1"
 rds_crr_size = 10
 rds_crr_subnet_group = "testcrrsubnet"
+
+#####################################################################################
+####################################### iam_mod #####################################
+
+iam_name = "user-1"
+iam_force_destroy = false
+iam_pgp_key = "keybase:d3_jain"
+iam_password_reset_required = true
+iam_password_length = 8
+iam_permissions_boundary = ""
+iam_custom_policy_name = "testmodule"
+iam_custom_policy_description = "Testing Module"
+iam_aws_new_group = "Developers"
+iam_policy_data = {
+  actions   = "s3:ListAllMyBuckets"
+  resources = "arn:aws:s3:::*"
+  effect    = "Allow"
+}
+iam_assume_role_pol = "assume-rolepol"
+iam_assume_roles = [ "arn:aws:iam::448269213100:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport" ]
+iam_group_users = [ "user-1" ]
+iam_assumable_role_group_name = "abcde"
+iam_policyTwo = "testpolicy"
+iam_role_name = "role1"
+iam_role_groupname = "Group1"
+iam_iamarnname = "iamarngroupname"

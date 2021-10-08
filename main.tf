@@ -373,3 +373,27 @@ module "RDS" {
     rds_crr_subnet_group = var.rds_crr_subnet_group
 }
 
+module "iam_user_mod" {
+
+    source = "./module/IAM"
+
+    iam_name = var.iam_name
+    iam_force_destroy = var.iam_force_destroy
+    iam_pgp_key = var.iam_pgp_key
+    iam_password_reset_required = var.iam_password_reset_required
+    iam_password_length = var.iam_password_length
+    iam_permissions_boundary = var.iam_permissions_boundary
+    iam_custom_policy_name = var.iam_custom_policy_name
+    iam_custom_policy_description = var.iam_custom_policy_description
+    iam_aws_new_group = var.iam_aws_new_group
+    iam_policy_data = var.iam_policy_data
+    iam_assume_role_pol = var.iam_assume_role_pol
+    iam_assume_roles = var.iam_assume_roles
+    iam_group_users = var.iam_group_users
+    iam_assumable_role_group_name = var.iam_assumable_role_group_name
+    iam_policyTwo = var.iam_policyTwo
+    iam_role_name = var.iam_role_name
+    iam_role_groupname = var.iam_role_groupname
+    iam_iamarnname = var.iam_iamarnname
+
+}
