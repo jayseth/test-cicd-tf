@@ -11,7 +11,7 @@ trusted_cidr_blocks = ["172.31.64.0/20"]
 ######################################################################################
 ###################################  EKS  ############################################
 
-eks_availability_zones = ["us-east-1b","us-east-1c"]  
+eks_availability_zones = ["us-east-1d","us-east-1e"]  
 desired_size = 2
 max_size = 2
 min_size = 1
