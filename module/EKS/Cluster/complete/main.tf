@@ -55,7 +55,7 @@ module "subnets" {
   tags                            = local.tags
   public_subnets_additional_tags  = local.public_subnets_additional_tags
   private_subnets_additional_tags = local.private_subnets_additional_tags
-  aws_route_create_timeout = "10m"
+  aws_route_create_timeout = var.aws_route_create_timeout
 
   context = module.this.context
 }
