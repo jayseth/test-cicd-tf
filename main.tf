@@ -249,3 +249,37 @@ private_ip_EIPS              = var.private_ip_EIPS
 lb_listener_rule_priority    = var.mod_nlb_listener_rule_priority
 
 } 
+
+
+module "DYNAMODB" {
+
+    source = "./module/DynamoDB"
+
+    billing_mode                = var.billing_mode
+    db_name                     = var.db_name
+    hash_key                    = var.hash_key
+    range_key                   = var.range_key
+    read_capacity               = var.read_capacity
+    write_capacity              = var.write_capacity
+    stream_enabled_dynamodb     = var.stream_enabled_dynamodb
+    stream_view_type_dynamodb   = var.stream_view_type_dynamodb
+
+    ttl_attribute_name  =var.ttl_attribute_name
+    ttl_enable = var.ttl_enable
+ 
+}
+
+
+module "DAX" {
+
+    source = "./module/DAX"
+
+   
+    dax_cluster_name        = var.dax_cluster_name
+    dax_replication_factor  = var.dax_replication_factor
+    dax_node_type           = var.dax_node_type
+    dax_az                  = var.dax_az
+
+  
+}
+    
