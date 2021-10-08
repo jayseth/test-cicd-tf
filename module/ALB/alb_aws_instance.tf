@@ -5,7 +5,7 @@
 */
 
 resource "aws_instance" "test" {
-  ami           = "ami-087c17d1fe0178315"
+  ami           = var.alb_ami_id
   instance_type = "t2.micro"
   subnet_id = aws_subnet.lb_subnet[0].id
   
