@@ -144,7 +144,7 @@ vpc_cidr           = "10.0.0.0/16"
     mod_fsx_win_throughtput_capacity =1024 #minimum value
     mod_fsx_vpc_cidr = "10.0.0.0/16"
     mod_fsx_win_subids=["10.0.1.0/24","10.0.0.0/24"]
-    fsx_win_sub_az = [ "us-west-2a","us-west-2b" ]
+    fsx_win_sub_az = [ "us-east-1a","us-east-1b" ]
    
 
     mod_serv_directory_name = "corp.notexamplearul.com"
