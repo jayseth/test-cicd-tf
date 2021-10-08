@@ -148,3 +148,9 @@ variable "addons" {
   default     = []
   description = "Manages [`aws_eks_addon`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_addon) resources."
 }
+
+variable "aws_route_create_timeout" {
+  type        = string
+  default     = "9m"
+  description = "Time to wait for AWS route creation specifed as a Go Duration, e.g. `2m`"
+}
