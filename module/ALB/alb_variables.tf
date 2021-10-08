@@ -1,18 +1,4 @@
-variable "aws_region"{
-    description = "AWS_Region"
-    default = "us-east-2"
-    type = string
 
-
-}
-
-variable "aws_profile"{
-    description = "AWS_profile"
-    default = "terraform-practice"
-    type = string
-
-
-}
 
 
 variable "aws_vpc_cidr" {
@@ -62,3 +48,8 @@ variable "lb_listener_rule_priority" {
     default = 100
   
 }
+
+variable "alb_ami_id"{
+    description="sets the ami for zthe alb instance"
+    type=string
+}  
