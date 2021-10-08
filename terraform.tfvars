@@ -243,3 +243,34 @@ mod_nlb_listener_rule_priority          = 100
 
 
 
+
+#####################################################################################
+####################################### DYNAMO DB ###################################
+
+
+
+    billing_mode                = "PAY_PER_REQUEST"
+    db_name                     = "DB_1"
+    hash_key                    = "UserId"
+    range_key                   = "key2"
+    read_capacity               = 20
+    write_capacity              = 20
+    stream_enabled_dynamodb     = true
+    stream_view_type_dynamodb   ="NEW_AND_OLD_IMAGES"
+
+    ttl_attribute_name  ="TimeToExist"
+    ttl_enable = false
+
+
+
+#####################################################################################
+####################################### DAX #########################################
+
+
+    dax_cluster_name        = "cluster-example"
+    dax_replication_factor  = 2 #should be equal to number of AZ given  
+    dax_node_type           = "dax.r4.large"
+    dax_az                  = ["us-west-2a","us-west-2b"]
+
+
+
