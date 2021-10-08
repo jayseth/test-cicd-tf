@@ -229,6 +229,12 @@ variable "mod_lb_listener_rule_priority" {
 
 }
 
+variable "alb_ami_id"{
+  description="Sets the ami id for instance"
+  type=string
+
+}
+
 #####################################################################################
 ####################################### ec2_mod #####################################
 
