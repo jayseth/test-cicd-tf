@@ -70,7 +70,7 @@ module "VPC_PEERING"{
 module "ALB" {
 
     source = "./module/ALB"
-
+    
     enable_deletion_protection   = var.mod_lb_enable_deletion_protection
     lb_type                      = var.mod_lb_type
     aws_vpc_cidr                 = var.mod_aws_vpc_cidr
@@ -78,6 +78,7 @@ module "ALB" {
     public_subnet_cidr           = var.mod_public_subnet_cidr
     aws_vpc_sub_az               = var.mod_alb_vpc_sub_az
     lb_listener_rule_priority    = var.mod_lb_listener_rule_priority
+    alb_ami_id                   = var.alb_ami_id
 
   
 } 
