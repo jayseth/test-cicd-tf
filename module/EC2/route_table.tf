@@ -17,7 +17,7 @@ resource "aws_route_table_association" "public" {
   subnet_id      = aws_subnet.public[count.index].id
   route_table_id = aws_route_table.public.id
 }
-
+/*
 resource "aws_default_route_table" "private" {
   default_route_table_id = aws_vpc.this.default_route_table_id
 
@@ -37,3 +37,5 @@ resource "aws_route_table_association" "private" {
   route_table_id = aws_vpc.this.main_route_table_id
   subnet_id      = aws_subnet.private[count.index].id
 }
+
+*/
