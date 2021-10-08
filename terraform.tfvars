@@ -82,7 +82,7 @@ mod_lb_type                      = "application"
 mod_aws_vpc_cidr                 = "10.0.0.0/16"
 mod_lb_subnet_count              = 2
 mod_public_subnet_cidr           = ["10.0.0.0/24","10.0.1.0/24"]
-mod_alb_vpc_sub_az               = ["us-west-2a","us-west-2b"]
+mod_alb_vpc_sub_az               = ["us-east-1a","us-east-1b"]
 mod_lb_listener_rule_priority    = 100
 
 
