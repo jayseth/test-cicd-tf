@@ -316,4 +316,60 @@ module "KMS" {
 
 
   
-}   
+} 
+
+module "ebs_mod" {
+
+    
+    source = "./module/ebs"
+    
+    ebs_availability_zone = var.ebs_availability_zone
+    ebs_encrypted = var.ebs_encrypted
+    ebs_size = var.ebs_size
+    ebs_snap = var.ebs_snap
+    ebs_dlm_policy_interval          = var.ebs_dlm_policy_interval
+    ebs_dlm_policy_interval_unit     = var.ebs_dlm_policy_interval_unit
+    ebs_dlm_policy_times             = var.ebs_dlm_policy_times
+    ebs_dlm_policy_retain_count      = var.ebs_dlm_policy_retain_count
+
+  
+}
+
+module "s3_mod" {
+
+    
+    source = "./module/s3"
+    
+    s3_log-acl = var.s3_log-acl
+    s3_bucket-acl = var.s3_bucket-acl
+    s3_static-website = var.s3_static-website
+    s3_enabled = var.s3_enabled
+    s3_life-cycle-enabled = var.s3_life-cycle-enabled
+
+  
+}  
+
+module "rds_mod" {
+    source = "./module/rds"
+    
+    rds_main_allocated_storage = var.rds_main_allocated_storage
+    rds_main_backup_retention_period = var.rds_main_backup_retention_period
+    rds_main_db_instance_name = var.rds_main_db_instance_name
+    rds_main_db_password = var.rds_main_db_password
+    rds_main_engine_name = var.rds_main_engine_name
+    rds_main_family = var.rds_main_family
+    rds_main_instance_class = var.rds_main_instance_class
+    rds_main_license_model = var.rds_main_license_model
+    rds_main_parameter_group = var.rds_main_parameter_group
+    rds_main_subnet_group = var.rds_main_subnet_group
+    same_region = var.same_region
+    rds_rr_instance_class = var.rds_rr_instance_class
+    rds_rr_size = var.rds_rr_size
+    cross_region = var.cross_region
+    rds_crr_instance_class = var.rds_crr_instance_class
+    rds_crr_parameter_group = var.rds_crr_parameter_group
+    rds_crr_region = var.rds_crr_region
+    rds_crr_size = var.rds_crr_size
+    rds_crr_subnet_group = var.rds_crr_subnet_group
+}
+

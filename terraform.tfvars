@@ -293,3 +293,72 @@ mod_nlb_listener_rule_priority          = 100
     kms_key_enabled = true
     kms_key_rotation = false
     kms_key_alias = "my-key-alias"
+
+#####################################################################################
+####################################### ebs_mod #####################################
+
+ebs_availability_zone = "ap-south-1a"
+ebs_encrypted = true
+ebs_size = 40
+ebs_snap = "true"
+ebs_dlm_policy_interval          =24
+ebs_dlm_policy_interval_unit     ="HOURS"
+ebs_dlm_policy_times             =["23:45"]
+ebs_dlm_policy_retain_count      =14
+
+
+#####################################################################################
+####################################### s3_mod #####################################
+
+s3_log-acl = "log-delivery-write"
+s3_bucket-acl = "public-read"
+s3_static-website = "index.html"
+s3_enabled = true
+s3_life-cycle-enabled = true
+
+
+#####################################################################################
+####################################### rds_mod #####################################
+
+#--------------------------------------------------Main-Instance---------------------------------------------------------------------------------------
+rds_main_allocated_storage = 10
+rds_main_backup_retention_period = 35
+rds_main_db_instance_name = "mdbjain"
+rds_main_db_password = "dheeraj05"
+rds_main_engine_name = "postgres"
+rds_main_family = {
+    "mysql" = "mysql8.0",
+    "sqlserver-ex" = "sqlserver-ex-15.0",
+    "sqlserver-web" = "sqlserver-web-15.0",
+    "sqlserver-se" = "sqlserver-se-15.0",
+    "sqlserver-ee" = "sqlserver-ee-15.0",
+    "postgres" = "postgres13",
+    "oracle-se2" = "oracle-se2-19"
+}
+rds_main_instance_class = "db.t3.small"
+rds_main_license_model = {
+    "mysql" = "",
+    "sqlserver-ex" = "license-included",
+    "sqlserver-web" = "license-included"
+    "sqlserver-se" = "license-included"
+    "sqlserver-ee" = "license-included"
+    "postgres" = "",
+    "oracle-se2" = "license-included"
+}
+rds_main_parameter_group = "testparameter"
+rds_main_subnet_group = "testsubnet"
+
+#-------------------------------------------Same-Region-Read-Replica-----------------------------------------------------------------------------------
+
+same_region = false
+rds_rr_instance_class = "db.t3.small"
+rds_rr_size = 10
+
+#------------------------------------------Cross-Region-Read-Replica-----------------------------------------------------------------------------------
+
+cross_region = true
+rds_crr_instance_class = "db.t3.small"
+rds_crr_parameter_group = "testcrrparameter"
+rds_crr_region = "ap-south-1"
+rds_crr_size = 10
+rds_crr_subnet_group = "testcrrsubnet"
