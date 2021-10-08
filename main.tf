@@ -373,7 +373,7 @@ module "RDS" {
     rds_crr_subnet_group = var.rds_crr_subnet_group
 }
 
-module "iam_user_mod" {
+module "IAM" {
 
     source = "./module/IAM"
 
