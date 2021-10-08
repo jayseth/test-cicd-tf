@@ -283,3 +283,36 @@ module "DAX" {
   
 }
     
+
+module "ACM" {
+
+    source = "./module/ACM"
+
+    acm_domain_name = var.acm_domain_name
+    acm_validation_method = var.acm_validation_method
+  
+}
+
+
+module "KMS" {
+
+    source = "./module/KMS"
+
+    
+    kms_key_desc            = var.kms_key_desc
+    kms_key_deletion_window = var.kms_key_deletion_window
+    kms_key_usage           = var.kms_key_usage
+    kms_key_spec            = var.kms_key_spec
+    kms_key_enabled         = var.kms_key_enabled
+    kms_key_rotation        = var.kms_key_rotation
+    kms_key_alias           = var.kms_key_alias
+
+  
+}
+ 
+ module "OAI" {
+    source = "./module/OAI"
+
+
+  
+}   
